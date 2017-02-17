@@ -41,6 +41,7 @@ for (let i = 0; i < notPurple.length; i++){
 //document.querySelectorAll('li');
 
 // Element.textContent - read & set text
+
 const myInput = document.querySelector('input.description');
 const p = document.querySelector('p.description');
 const button = document.querySelector('button.description');
@@ -51,3 +52,7 @@ button.addEventListener('click', () => {
 })
 
 
+// Accessing Attributes
+p.title = "List description";
+
+// 
