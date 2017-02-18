@@ -1,8 +1,10 @@
 const toggleList = document.getElementById('toggleList');
 const listDiv =  document.querySelector('.list');
-const myInput = document.querySelector('input.description');
-const p = document.querySelector('p.description');
-const button = document.querySelector('button.description');
+const descriptionInput = document.querySelector('input.description');
+const descriptionP = document.querySelector('p.description');
+const descriptionButton = document.querySelector('button.description');
+const addItemInput = document.querySelector('input.addItemInput');
+const addItemButton = document.querySelector('button.addItemButton');
 
 
 toggleList.addEventListener('click', () => {
@@ -15,7 +17,19 @@ toggleList.addEventListener('click', () => {
     }
 });
 
-button.addEventListener('click', () => {
-    alert('why');
-    p.textContent = myInput.value + ':';
-})
+descriptionButton.addEventListener('click', () => {
+    descriptionP.textContent = descriptionInput.value + ':';
+    addItemInput.value = '';// clear the input box
+});
+
+// Adding elements to the DOM - appenChild method is added to the parent element
+addItemButton.addEventListener('click', () => {
+    let ul = document.getElementsByTagName('ul')[0]; //returns a collection
+    let li = document.createElement('li');
+    li.textContent = addItemInput.value;
+    ul.appendChild(li);
+    addItemInput.value = '';// clear the input box
+});
+
+
+
