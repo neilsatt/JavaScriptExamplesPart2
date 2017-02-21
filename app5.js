@@ -6,6 +6,12 @@ const listItems = document.getElementsByTagName('li');
 const listDiv = document.querySelector('.list');
 const listUl = listDiv.querySelector('ul');
 
+const firstListItem = listUl.firstElementChild;
+const lastListItem = listUl.lastElementChild;
+
+firstListItem.style.backgroundColor = 'lightskyblue';
+lastListItem.style.backgroundColor = 'lightsteelblue';
+
 
 // Version 1 - loop through all list items 
 /*
